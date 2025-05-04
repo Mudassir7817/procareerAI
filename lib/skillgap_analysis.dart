@@ -43,7 +43,8 @@ class _SkillsGapScreenState extends State<SkillsGapScreen> {
 
     try {
       // For Android emulator, use 10.0.2.2. Otherwise, 127.0.0.1 or your machine's IP.
-      final uri = Uri.parse("http://10.0.2.2/analyzeCV");
+      final uri = Uri.parse("http://10.0.2.2:5000/analyzeCV");
+
       var request = http.MultipartRequest("POST", uri);
 
       // Attach the PDF file

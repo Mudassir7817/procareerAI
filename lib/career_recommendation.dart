@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:procareer_ai/career_recommendation_lvl_01.dart';
 
-// Use your real backend URL
+// for chrome: 127.0.0.1
+// for emulator: 10.0.2.2
 const String backendUrl = "http://10.0.2.2:5000/recommend";
 
 class CareerRecommendationScreen extends StatefulWidget {

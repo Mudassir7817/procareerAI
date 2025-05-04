@@ -151,6 +151,9 @@ def analyze_cv():
         # Lowercase the resume text
         resume_text = full_text.lower()
 
+        print("Extracted PDF text:", full_text)
+
+
         # Skills in resume
         skills_you_have = [
             skill for skill in master_skills

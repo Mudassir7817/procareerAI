@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:procareer_ai/career_recommendation.dart';
+import 'package:procareer_ai/login.dart';
+import 'package:procareer_ai/sign_up.dart';
 import 'package:procareer_ai/skillgap_analysis.dart';
+import 'package:procareer_ai/trendingjob_page.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -29,7 +32,10 @@ class HomeScreen extends StatelessWidget {
           _buildNavTextButton('Home', onPressed: () {}),
           _buildNavTextButton('Features', onPressed: () {}),
           _buildNavTextButton('Contact Us', onPressed: () {}),
-          _buildNavTextButton('Sign Up', onPressed: () {}),
+          _buildNavTextButton('Sign Up', onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => SignUpPage()));
+          }),
         ],
       ),
       body: SingleChildScrollView(
@@ -120,11 +126,19 @@ class HomeScreen extends StatelessWidget {
                         description:
                             'Explore Personalized career paths with AI-Powered quizzes to find the best for you.',
                       ),
-                      ToolCard(
-                        imageUrl: 'assets/images/TrendingJobs.png',
-                        title: 'Trending Jobs',
-                        description:
-                            'Practice real scenarios with feedback to refine your skills and boost your confidence.',
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => TrendingJobsPage()));
+                        },
+                        child: ToolCard(
+                          imageUrl: 'assets/images/TrendingJobs.png',
+                          title: 'Trending Jobs',
+                          description:
+                              'Practice real scenarios with feedback to refine your skills and boost your confidence.',
+                        ),
                       ),
                       InkWell(
                         onTap: () {
